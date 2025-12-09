@@ -89,4 +89,3 @@ def maxAndmin2(lst):
     print("Minimum Element:",min)
 maxAndmin2([10,-55,2,33])
 maxAndmin2([-10,-55,-2,-33])
-
