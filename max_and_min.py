@@ -9,7 +9,7 @@ max_and_min([-10,-3,-6,-2])
 
 #Time Complexity --> O(n)
 #Space Complexity --> O(1)
-'''-------------------------------------------------------------------------'''
+'''-----------------------------------------------------------------------------------------------'''
 #Find max & min WITHOUT using max(), min() but using sorting
 
 def maxMinBySort(lst):
@@ -18,13 +18,46 @@ def maxMinBySort(lst):
     print("Maximum Element:",lst[-1])
 maxMinBySort([10,-2,15,100])
 
-'''------------------------------------------------------------------------'''
+'''-----------------------------------------------------------------------------------------------'''
+#Find the max & min difference (range)
+
 def rangeOfList(lst):
     print("\nRange of List:",max(lst)-min(lst))
 rangeOfList([10, 3, 6, 2])
 
-'''------------------------------------------------------------------------'''
+'''-----------------------------------------------------------------------------------------------'''
 
+#Return INDEX of max & min, not values
+
+# Using loop
+def max_and_min(lst):
+    max=lst[0]
+    min=lst[0]
+    max_index=0
+    min_index=0
+    for i in range(0,len(lst)):
+        if lst[i]>max:
+            max=lst[i]
+            max_index=i
+        if lst[i]<min:
+            min=lst[i]
+            min_index=i
+    print("Index of Max Element:",max_index)
+    print("Index of Min Element:",min_index)
+max_and_min([10, 3, 6, 21])
+#------------------------------------------------------------
+#Using min(),max() and index() functions 
+def indexValue(lst):
+    print("Index of Max(using function):",lst.index(max(lst)))
+    print("Index of Min(Using function):",lst.index(min(lst)))
+indexValue([10, 3, 6, 20])
+
+'''-----------------------------------------------------------------------------------------------'''
+def rangeOfList(lst):
+    print("\nRange of List:",max(lst)-min(lst))
+rangeOfList([10, 3, 6, 2])
+
+'''-----------------------------------------------------------------------------------------------'''
 #Find max & min WITHOUT using max(), min(), or sorting
 
 def maxAndmin(lst):
